@@ -37,7 +37,7 @@ Now a window like the following shows up where you can input the laptop features
 
 
 <p align="center">
-    <img src="images\python_RjgBSPD9cX.png" alt="Alt image text" />
+    <img src="images\image_2024-02-05_225839551.png" alt="Alt image text" />
 </p>
 
 

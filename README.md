@@ -23,7 +23,7 @@ A ML model that uses sklearn's `GradientBoostingRegressor` to train on the lapto
 
 
 ## How to use the project locally
-Start by cloning the repo to your device and make a new environment.
+Start by cloning the repo to your device and making a new environment.
 
 ### Install the required dependencies
 

@@ -1,0 +1,90 @@
+/* Global Font Size */
+* {
+    font-size: 14px; /* Adjust the font size as needed */
+}
+
+/* Rest of your styles... */
+/* General Styles */
+QWidget {
+    font-family: "Helvetica";
+    color: #ddd; /* Lighter text color for dark theme */
+    background-color: #333; /* Dark background color */
+}
+
+/* ComboBox Styles */
+QComboBox {
+    min-width: 150px; /* Adjust as needed */
+    min-height: 35px; /* Increased minimum height */
+    padding: 10px; /* Increased padding */
+    border: 1px solid #555; /* Darker border for dark theme */
+    border-radius: 10px; /* More rounded corners */
+    background-color: #444; /* Darker background for dark theme */
+    color: #ddd; /* Lighter text color for dark theme */
+}
+
+/* Line Edit Styles */
+QLineEdit {
+    border: 1px solid #555; /* Darker border for dark theme */
+    border-radius: 10px; /* More rounded corners */
+    padding: 10px; /* Increased padding */
+    min-height: 35px; /* Increased minimum height */
+    background-color: #444; /* Darker background for dark theme */
+    color: #ddd; /* Lighter text color for dark theme */
+}
+/* Button Styles */
+QPushButton {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    background-color: #df1331; /* Darker background for buttons */
+    color: #ddd; /* Lighter text color for dark theme */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #a00435; /* Even darker background on hover */
+}
+
+QPushButton:pressed {
+    background-color: #500101; /* Darkest background when pressed */
+}
+
+QComboBox:editable {
+    background: #444; /* Same background color as QComboBox */
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid #555; /* Darker border for dark theme */
+}
+
+/* Line Edit Styles */
+QLineEdit {
+    border: 1px solid #555; /* Darker border for dark theme */
+    border-radius: 10px; /* More rounded corners */
+    padding: 8px;
+    min-height: 20px;
+    background-color: #444; /* Darker background for dark theme */
+    color: #ddd; /* Lighter text color for dark theme */
+}
+
+QLineEdit:focus {
+    border-color: #777; /* Darker border color when focused */
+}
+
+/* Label Styles */
+QLabel {
+    margin-right: 10px;
+    color: #ddd; /* Lighter text color for dark theme */
+}
+
+/* Grid Layout Styles */
+QGridLayout {
+    /* spacing: 10px; */
+    margin: 10px;
+}
+
+/* Main Window Styles */
+QMainWindow {
+    background-color: #333; /* Dark background color */
+}

@@ -1,6 +1,6 @@
 import sys
 
-from utils import load_model, load_transformers
+from utils import load_model, load_label_encoders
 from predictorGUI import evaluate, PredictWinodw, Predict # importing our model, view, controller respectively
 from PyQt5.QtWidgets import QApplication
 
@@ -12,7 +12,7 @@ def main():
     model_path = 'models/rmse318.pkl'
     model = load_model(model_path)
 
-    les = load_transformers()
+    les = load_label_encoders(path='label_encoders')
 
     data_format = {
         'Status': None,
@@ -50,7 +50,7 @@ def main():
         
     window = PredictWinodw(mlModel=model, format=data_format, notes=notes)
     window.show()
-    predictor = Predict(model=evaluate, view=window, transformers=les)
+    predictor = Predict(model=evaluate, view=window, label_encoders=les)
 
     sys.exit(app.exec())
 

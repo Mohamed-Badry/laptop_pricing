@@ -169,16 +169,16 @@ class Predict():
         view: QMainWindow
             the class that handles the GUI
             
-        transformers: dict
-            the transformers used on the data loaded into a dictionary
+        label_encoders: dict
+            the label_encoders used on the data loaded into a dictionary
             key -> label
             value -> labelEncoder()
     """
 
-    def __init__(self, model, view, transformers):
+    def __init__(self, model, view, label_encoders):
         self._evaluate = model
         self._view = view
-        self._les = transformers
+        self._les = label_encoders
         self._connectSignalAndSlots()
 
     def _predictTarget(self):
@@ -186,7 +186,7 @@ class Predict():
         data = self._view.getData()
         try:
             result = str(self._evaluate(
-                mlModel=self._view.getModel(), data=data, transformers=self._les))
+                mlModel=self._view.getModel(), data=data, label_encoders=self._les))
         except (KeyError, ValueError) as e:
             # print("Exception occurred:", e) # Debugging statement
             result = "Error: invalid input data"
@@ -197,7 +197,7 @@ class Predict():
         self._view.display.returnPressed.connect(self._predictTarget)
 
 
-def evaluate(mlModel, data, transformers):
+def evaluate(mlModel, data, label_encoders):
     """ Predict the target (Model) """
-    data_t = transform_data(data, transformers)
+    data_t = transform_data(data, label_encoders)
     return round(mlModel.predict(data_t)[0], 2)

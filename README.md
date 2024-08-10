@@ -10,7 +10,7 @@ A ML model that uses sklearn's `GradientBoostingRegressor` to train on the lapto
 ### Folders:
 - `data`: Where data is stored. 
 - `models`: Where models are stored. 
-- `transformers`: Where transformers are stored.
+- `label_encoders`: Where label encoders are stored.
 - `images`: Where images are stored.
 
 ### Files:
